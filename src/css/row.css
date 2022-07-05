@@ -1,0 +1,23 @@
+.row {
+    width: 500px;
+    border: 2px solid red;
+}
+
+.f {
+    width: 100px !important;
+    margin: 0px;
+}
+
+.b {
+    border: 1px solid black;
+    width: 20px;
+    height: 40px;
+    margin: 0px;
+}
+.i {
+   padding: 0px;
+}
+
+Button {
+    height: 37px;
+}

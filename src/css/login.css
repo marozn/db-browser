@@ -1,0 +1,10 @@
+.login {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 0.5rem;
+}
