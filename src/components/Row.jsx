@@ -12,10 +12,10 @@ export default function Row({id, str, num, boo, update, uValue}) {
     const newString = string === null ? str : string
     const newNumber = number === null ? num : number
     const newBool = bool === null ? boo : bool
-    const res = await axios.put(`http://localhost:8080/update/${id}/${newString}/${newNumber}/${newBool}`,{}, {headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
+    await axios.put(`http://localhost:8080/update/${id}`,{'str': newString, 'num': newNumber, 'boo': newBool}, {headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
   }
   async function deleteRow() {
-    const res = await axios.delete(`http://localhost:8080/delete/${id}`, {headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
+    await axios.delete(`http://localhost:8080/delete/${id}`, {headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
     update(!uValue)
   }
   return (

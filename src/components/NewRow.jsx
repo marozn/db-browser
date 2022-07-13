@@ -8,7 +8,7 @@ export default function NewRow({update, uValue}) {
     const [bool, setBool] = useState(true);
     async function addRow() {
         if (string === null || number === null) return;
-        const res = await axios.post(`http://localhost:8080/create/${string}/${number}/${bool}`,{}, {headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
+        await axios.post(`http://localhost:8080/create`,{'str': string, 'num': number, 'boo': bool}, {headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
         update(!uValue)
     }
   return (
